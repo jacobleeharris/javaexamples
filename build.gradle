@@ -1,0 +1,63 @@
+plugins {
+	id "java"
+	id "com.diffplug.spotless" version "6.25.0"
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation(platform('org.junit:junit-bom:5.10.2'))
+	testImplementation('org.junit.jupiter:junit-jupiter')
+	testRuntimeOnly('org.junit.platform:junit-platform-launcher')
+}
+
+test {
+	useJUnitPlatform()
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
+}
+
+spotless {
+	// Apply miscellaneous formatting to misc. files
+	format 'misc', {
+		target '*.gradle', '.gitattributes', '.gitignore'
+
+		trimTrailingWhitespace()
+		indentWithTabs()
+		endWithNewline()
+	}
+	// Apply formatting to Java files
+	java {
+		importOrder('java|javax', 'org.junit', 'me.jacobleeharris')
+		removeUnusedImports()
+
+		cleanthat()
+
+		indentWithTabs()
+		formatAnnotations()
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = "UTF-8"
+	if (JavaVersion.current().isJava9Compatible()) {
+		it.options.release = 8
+	}
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+
+	// Build extra artifacts
+	withSourcesJar()
+}
+
+sourceSets {
+	simplebmicalculator
+}
+
+build.dependsOn spotlessCheck
