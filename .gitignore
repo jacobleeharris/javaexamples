@@ -1,4 +1,21 @@
+# Gradle files
 build/
-.vscode/
 .gradle/
+
+# VS Code files
+.vscode/
+
+# Intellij IDEA files
 .idea/
+*.imp
+*.ipr
+*.iws
+
+# Eclipse files
+/.classpath
+/.settings/
+/.project
+/bin/
+
+# Miscellaneous files
+*.log

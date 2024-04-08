@@ -6,18 +6,18 @@ import org.junit.jupiter.api.Test;
 import me.jacobleeharris.api.ImperialConverter;
 import me.jacobleeharris.api.ImperialUnitType;
 
-public class ImperialConverterTest {
+public class ImperialConverterTests {
 	@Test
-	private void testOuncesToPounds() {
+	public void testOuncesToPounds() {
 		double weight = ImperialConverter.convertWeight(ImperialUnitType.OUNCES, ImperialUnitType.POUNDS, 16.0D);
 		double expectedWeight = 1.0D;
-		Assertions.assertEquals(weight, expectedWeight);
+		Assertions.assertEquals(expectedWeight, weight);
 	}
 
 	@Test
-	private void testPoundsToStones() {
+	public void testPoundsToStones() {
 		double weight = ImperialConverter.convertWeight(ImperialUnitType.POUNDS, ImperialUnitType.STONES, 1.0D);
 		double expectedWeight = 1.0D / 14.0D;
-		Assertions.assertEquals(weight, expectedWeight);
+		Assertions.assertEquals(expectedWeight, weight);
 	}
 }

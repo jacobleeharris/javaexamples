@@ -2,35 +2,35 @@ package me.jacobleeharris.api;
 
 public enum MetricUnitType {
 	// Small unit types
-	DECIGRAM(-1),
-	CENTIGRAM(-2),
-	MILLIGRAM(-3),
-	MICROGRAM(-6),
-	NANOGRAM(-9),
-	PICOGRAM(-12),
-	FEMTOGRAM(-15),
-	ATTOGRAM(-18),
+	DECIGRAM(Math.pow(10, -1)),
+	CENTIGRAM(Math.pow(10, -2)),
+	MILLIGRAM(Math.pow(10, -3)),
+	MICROGRAM(Math.pow(10, -6)),
+	NANOGRAM(Math.pow(10, -9)),
+	PICOGRAM(Math.pow(10, -12)),
+	FEMTOGRAM(Math.pow(10, -15)),
+	ATTOGRAM(Math.pow(10, -18)),
 
 	// Base unit type
-	GRAM(0),
+	GRAM(1.0D),
 
 	// Large unit types
-	DECKAGRAM(1),
-	HECTOGRAM(2),
-	KILOGRAM(3),
-	MEGAGRAM(6),
-	GIGAGRAM(9),
-	TERAGRAM(12),
-	PETAGRAM(15),
-	EXAGRAM(18);
+	DECAGRAM(Math.pow(10, 1)),
+	HECTOGRAM(Math.pow(10, 2)),
+	KILOGRAM(Math.pow(10, 3)),
+	MEGAGRAM(Math.pow(10, 6)),
+	GIGAGRAM(Math.pow(10, 9)),
+	TERAGRAM(Math.pow(10, 12)),
+	PETAGRAM(Math.pow(10, 15)),
+	EXAGRAM(Math.pow(10, 18));
 
-	private final int scale;
+	private final double scale;
 
-	private MetricUnitType(int scale) {
+	private MetricUnitType(double scale) {
 		this.scale = scale;
 	}
 
-	public int getScale() {
+	public double getScale() {
 		return this.scale;
 	}
 }
