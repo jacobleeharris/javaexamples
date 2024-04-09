@@ -1,4 +1,4 @@
-package me.jacobleeharris.api;
+package me.jacobleeharris.api.unit;
 
 public class ImperialConverter {
 	public static int convertWeight(ImperialUnitType from, ImperialUnitType to, int weight) {

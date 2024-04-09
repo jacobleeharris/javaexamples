@@ -1,10 +1,10 @@
-package me.jacobleeharris.test;
+package me.jacobleeharris.test.unit;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import me.jacobleeharris.api.ImperialConverter;
-import me.jacobleeharris.api.ImperialUnitType;
+import me.jacobleeharris.api.unit.ImperialConverter;
+import me.jacobleeharris.api.unit.ImperialUnitType;
 
 public class ImperialConverterTests {
 	@Test

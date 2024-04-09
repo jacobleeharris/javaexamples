@@ -1,4 +1,4 @@
-package me.jacobleeharris.api;
+package me.jacobleeharris.api.unit;
 
 public class MetricConverter {
 	public static int convertWeight(MetricUnitType from, MetricUnitType to, int weight) {

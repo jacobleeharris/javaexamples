@@ -1,4 +1,4 @@
-package me.jacobleeharris.api;
+package me.jacobleeharris.api.unit;
 
 public enum MetricUnitType {
 	// Small unit types

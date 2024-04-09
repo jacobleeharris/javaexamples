@@ -1,10 +1,10 @@
-package me.jacobleeharris.test;
+package me.jacobleeharris.test.unit;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import me.jacobleeharris.api.MetricConverter;
-import me.jacobleeharris.api.MetricUnitType;
+import me.jacobleeharris.api.unit.MetricConverter;
+import me.jacobleeharris.api.unit.MetricUnitType;
 
 public class MetricConverterTests {
 	private static final double DELTA = Math.pow(10, -12);

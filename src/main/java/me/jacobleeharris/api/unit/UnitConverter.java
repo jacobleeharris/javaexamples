@@ -1,4 +1,4 @@
-package me.jacobleeharris.api;
+package me.jacobleeharris.api.unit;
 
 // Used for conversion between metric and imperial
 public class UnitConverter {

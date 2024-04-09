@@ -4,6 +4,7 @@ build/
 
 # VS Code files
 .vscode/
+bin/
 
 # Intellij IDEA files
 .idea/
