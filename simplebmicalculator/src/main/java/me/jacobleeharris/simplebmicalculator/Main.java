@@ -1,10 +1,9 @@
 package me.jacobleeharris.simplebmicalculator;
 
-import me.jacobleeharris.api.unit.UnitConverter;
-
 import java.util.Scanner;
 
 import me.jacobleeharris.api.cli.InputHelper;
+import me.jacobleeharris.api.unit.UnitConverter;
 
 public class Main {
 	public static void main(String[] args) {
